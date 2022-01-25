@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Intro To Front End</title>
+    <style>
+        p {
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button {margin: 10px;}
+
+        .hidden {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet asperiores assumenda cupiditate sit? Accusamus accusantium animi atque commodi consequatur debitis dicta dignissimos inventore molestias, officia optio placeat quibusdam, similique ut.</p>
+    <p id="hideable">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad distinctio impedit labore minus nesciunt odit quam. Commodi debitis facere labore maiores minima neque placeat possimus repellendus sit suscipit unde, ut!</p>
+    <button id="toggle">Toggle Paragraph</button>
+
+    <script>
+        let toggleButton = document.getElementById("toggle");
+
+        let hideableParagraph = document.getElementById("hideable")
+
+        toggleButton.oneclick = function(){
+            let theClass = hideableParagraph.getAttribute("class");
+            if (theClass == "hidden") {
+                hideableParagraph.removeAttribute("class");
+            } else {
+                hideableParagraph.setAttribute("class", "hidden");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -29,6 +29,3 @@ var timeGain = (timeAtCurrentSpeed - timePlannedSpeed);
 alert("If you drive at " + newSpeed + " mph, you will arrive " + timeGain.toFixed(2) + " minutes sooner.");
 
 
-
-
-

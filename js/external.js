@@ -17,20 +17,23 @@ console.log("Hello from external JavaScript");
 // alert("Great, that will be $" + totalPrice);
 
 
-// var googlePayInDollars = Number(prompt("How much does Google pay you per hour?"));
-// var googlePay = Number(prompt("How many hours did you work for Google this week?"));
-// var amazonPayInDollars = Number(prompt("How much does Amazon pay you per hour?"));
-// var amazonPay = Number(prompt("How many hours did you work for Amazon this week?"));
-// var facebookPayInDollars = Number(prompt("How much does Facebook pay you per hour?"));
-// var facebookPay = Number(prompt("How many hours did you work for Facebook this week?"));
-//
-// var totalPay = (googlePay * googlePayInDollars) + (amazonPay * amazonPayInDollars) + (facebookPay * facebookPayInDollars);
-// alert("You made $" + totalPay + " this week!");
+var googlePayInDollars = Number(prompt("How much does Google pay you per hour?"));
+var googlePay = Number(prompt("How many hours did you work for Google this week?"));
+var amazonPayInDollars = Number(prompt("How much does Amazon pay you per hour?"));
+var amazonPay = Number(prompt("How many hours did you work for Amazon this week?"));
+var facebookPayInDollars = Number(prompt("How much does Facebook pay you per hour?"));
+var facebookPay = Number(prompt("How many hours did you work for Facebook this week?"));
+
+var totalPay = (googlePay * googlePayInDollars) + (amazonPay * amazonPayInDollars) + (facebookPay * facebookPayInDollars);
+alert("You made $" + totalPay + " this week!");
+
+// //
+// var classNotFull = false;
+// var noScheduleConflict = false;
+// var canEnroll = (classNotFull && noScheduleConflict);
+// alert("It is " + canEnroll + " that you can enroll in this class");
 
 
-var classNotFull = false;
-var noScheduleConflict = false;
-var canEnroll = (classNotFull && noScheduleConflict);
-alert("It is " + canEnroll + " that you can enroll in this class");
+
 
 

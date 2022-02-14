@@ -98,3 +98,33 @@ function removeBs(arr){
 }
 
 console.log(removeBs(['abc', 'ab', 'cat', 'Bay']));
+
+
+// Write a function, createUserMsg, that takes in a user object like the following...
+// {
+//     username: ‘jbomb’,
+//     email: ‘john@email.com’,
+//     isAdmin: true
+// }
+// ...and returns a string output that displays in the console like this...
+// ‘User jbomb is an admin and can be reached at john@email.com’
+// If jbomb were not an admin, the message should display...
+// ‘User jbomb is not an admin and can be reached at john@email.com’
+
+// function createUserMsg(username, email){
+//     var username = "jbomb";
+//     var email = 'john@email.com';
+//     if (username && )
+// }
+
+var user = {
+    username: 'jbomb',
+    email: 'john@email.com',
+    isAdmin: false
+};
+
+function createUserMsg(user) {
+    return "User" + user.username + " is " + ((user.isAdmin) ? "" : "not ") + "an admin and can be reached at " + user.email;
+}
+
+console.log(createUserMsg(user));

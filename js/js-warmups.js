@@ -128,3 +128,15 @@ function createUserMsg(user) {
 }
 
 console.log(createUserMsg(user));
+
+
+
+function areaOrPerimeter(length, width){
+    if(length === width){
+        return length * width;
+} else {
+    return (length + width) * 2;
+}}
+
+console.log(areaOrPerimeter(4,4));
+console.log(areaOrPerimeter(4,8))

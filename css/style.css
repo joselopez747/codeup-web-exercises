@@ -1,0 +1,52 @@
+
+body {
+    background-color: darkgrey;
+    background-image: url(../images/sand.jpg);
+    background-size: cover;
+    font-family: "Academy Engraved LET";
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+header, main, footer {
+    color: #c52121;
+    text-decoration: underline;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center
+}
+
+ul {
+    list-style-type: -moz-bengali;
+}
+
+table {
+    margin: auto;
+    border: thin solid black;
+    font-size: 1.2em;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: thin dotted gray;
+    padding: 10px;
+}
+
+th {
+    background-color: peachpuff;
+}
+
+a:link {
+    color: ;
+}
+
+:visited {
+    color: ;
+}

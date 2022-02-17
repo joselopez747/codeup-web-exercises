@@ -140,3 +140,24 @@ function areaOrPerimeter(length, width){
 
 console.log(areaOrPerimeter(4,4));
 console.log(areaOrPerimeter(4,8))
+
+
+
+
+//write a function, sumTheStrings
+//it should take two numeric strings as input
+//it should add the numbers
+//and output the sum **as a string**
+
+//bonus: return false if the arguments
+//are anything other than numeric strings
+
+function sumTheStrings(input1, input2){
+    if (typeof input1 !== 'string' || typeof input2 !== 'string' || isNaN(parseFloat(input2)) || isNaN(parseFloat(input1))){
+        return false;
+    }
+    return (parseFloat(input1) + parseFloat(input2)).toString();
+}
+
+console.log(sumTheStrings('14', '20'));
+

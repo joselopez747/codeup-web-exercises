@@ -1,0 +1,54 @@
+body {
+    margin: 15px;
+
+}
+
+#main {
+    width: 360px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    box-shadow: 10px 5px darkslategrey /* negative numbers shadow left and top*/
+}
+
+#main:hover {
+    outline: 5px solid crimson;
+}
+/*this is short hand for the above */
+/* #main {
+    width: 360px;
+    border: 1px solid black;
+ */
+/* padding is inside the border between the content and the border
+margin is for the space outside the border (almost like a tab) margin: auto; will make it center.
+ */
+
+/* you can use % instead on px for your width. this will cause the size of your paragraphs to adjust according to the size of your page  */
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 15px auto;
+}
+
+p:first-of-type {
+    margin-top: 10px
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+/*use a <span></span> to select a specific area to edit the style
+if you have more than one span you have to assign 'id's or 'class'
+ */

@@ -161,3 +161,98 @@ function sumTheStrings(input1, input2){
 
 console.log(sumTheStrings('14', '20'));
 
+// Write a function, getSimpleUser, that takes in a user object and returns a simplified user object.
+//     Assume the following shape of the user object for the function input:
+//     {
+//         firstName: '...',
+//         lastName: '...',
+//         email: '...',
+//         username: '...',
+//         password: '...'
+//     }
+// The shape of the output should be the following:
+// {
+//     firstName: '...',
+//         lastName: '...',
+// }
+// Regardless of the case of the first name and last name input, the output should be in all lower case.
+// var fred = {
+//     firstName: 'Fred',
+//     lastName: 'Smith',
+//     email: 'fred@email.com',
+//     username: 'fred123',
+//     password: 'pass123'
+// }
+// getSimpleUser(fred) // {firstName: 'fred', lastName: 'smith'}
+
+
+// Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array. The function should return an object with properties containing information about the array, including the lengthOfArray, containsAllStrings, and the combineResult of adding all elements together.
+// analyzeArray([1, 2, 3]) returns...
+// {
+//     lengthOfArray: 3,
+//         containsAllStrings: false,
+//     combineResult: 6
+// }
+// analyzeArray([‘a’, ‘b’, ‘c’]) returns...
+// {
+//     lengthOfArray: 3,
+//         containsAllStrings: true,
+//     combineResult: ‘abc’
+// }
+// analyzeArray([‘bob’, 100, null]) returns...
+// {
+//     lengthOfArray: 3,
+//         containsAllStrings: true,
+//     combineResult: ‘bob123null’
+// }
+
+function analyzeArray([input]){
+    if (input !== 'number' || 'string'){
+        return false;
+    }
+        return input.length + input.length;
+}
+
+// Create a function, createNames, that takes in an array of first names and an array of last names. The function should return an array of name objects with firstName and lastName properties with the input array values. Assume both input arrays are not empty, the same length and only contain string elements.
+//
+// var firstNames = ['CJ', 'Max', 'Claude', 'Meowmeow'];
+// var lastNames = ['Cat', 'Feline', 'Kitten', 'Calico'];
+//
+// createNames(firstNames, lastNames) // returns...
+//
+//     [
+//     {
+//         firstName: 'CJ',
+//         lastName: 'Cat'
+//     },
+//     {
+//         firstName: 'Max',
+//         lastName: 'Feline'
+//     },
+//     {
+//         firstName: 'Claude',
+//         lastName: 'Kitten'
+//     },
+//     {
+//         firstName: 'Meowmeow',
+//         lastName: 'Calico'
+//     }
+//     ]
+//
+// HINT: a solution may involve using a for loop to iterate over the length of one array to push each name object onto an array of name objects that will be returned from the function.
+
+function createNames(arr1, arr2) {
+    var output = [];
+    var length = arr1.length;
+    for (var i = 0; i < length; i += 1){
+        output.push({
+            firstName:arr1[i],
+            lasName: arr2[i]
+        });
+    }
+    return output;
+}
+
+var firstNames = ['CJ', 'Max', 'Clause', 'Meowmeow'];
+var lastNames = ['Cat', 'Fetline', 'Kitten', 'Calico'];
+console.log(createNames(firstNames, lastNames));

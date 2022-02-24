@@ -256,3 +256,28 @@ function createNames(arr1, arr2) {
 var firstNames = ['CJ', 'Max', 'Clause', 'Meowmeow'];
 var lastNames = ['Cat', 'Fetline', 'Kitten', 'Calico'];
 console.log(createNames(firstNames, lastNames));
+
+
+// write a function that accepts two integers and returs the remainder of dividing the larger value by the smaler value.
+//Division by zero should return NaN.
+//examples: n = 5, m =2
+//result = 2 (remainder of '17/ '5)
+
+function remainderOfDividing (input1, input2){
+    if (isNaN(parseFloat(input1)) || isNaN(parseFloat(input2))){
+        return false;
+    }
+    if (input1 > input2){
+        return input1 % input2;
+    }
+    return int2 % input1;
+}
+
+
+function printerError(string){
+    var totalOverM = 0;
+    for (var i in string) {
+        if (string[i] > "m"){totalOverM++}
+    }
+    return "" + totaloverM + "/" + string.length;
+}

@@ -281,3 +281,7 @@ function printerError(string){
     }
     return "" + totaloverM + "/" + string.length;
 }
+
+function isLockNessMonster(s) {
+    return (s.includes("tree fiddy"))
+}

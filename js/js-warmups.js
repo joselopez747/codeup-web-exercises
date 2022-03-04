@@ -285,3 +285,39 @@ function printerError(string){
 function isLockNessMonster(s) {
     return (s.includes("tree fiddy"))
 }
+/////
+function parcelWeight(object){
+    return object.weight;
+}
+
+var parcel = {
+    parcelNumber: 1,
+    weight: 20
+}
+
+console.log(parcelWeight(parcel));
+
+/////
+// function totalWeight(arrayOfObjects){
+//     var total = 0;
+//     for (var i = 0; i < arrayofObjects.length; i++){
+//         total += arrayOfObjects[i].weight;
+//     }
+//     return total;
+// }
+//
+// var parcels = [{number: 1, weight: 20}, {number: 2, weight: 25}];
+//
+// console.log(totalWeight(parcel));
+
+
+///DOM WARMUP
+
+
+var pressButton = document.querySelector('button');
+
+function itsTime(){
+    document.querySelector('h1').innerText = "Good Afternoon";
+}
+
+pressButton.addEventListener('click', itsTime);

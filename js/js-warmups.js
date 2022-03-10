@@ -386,9 +386,98 @@
 // //     numberOfLogins: 100
 // // }
 
+// ================================= WARM UP
+//
+// Create a function, computeOperations, that takes in an array of operation objects and a starting integer value and returns an integer after all the calculations have completed, using the second integer argument as the first operand. Each operation object will have the following shape:
+//
+// {
+//     operation: 'subtract' (or 'multiply' or 'add'),
+//     integer: 7 (or any positive or negative integer)
+// }
+
+// function computeOperations(operators, startingNum){
+//     for (var i = 0; i < operations.length; i++)
+//
+// }
+
+// Example 1...
+//
+// var operations1 = [
+//
+//     {
+//         operation: 'add',
+//         integer: 7
+//     },
+//     {
+//         operation: 'add',
+//         integer: 3
+//     }
+// ]
+//
+//
+// computeOperations(operations1, 10) // returns 20
+//
+//
+// Example 2...
+//
+// var operations2 = [
+//
+//     {
+//         operation: 'add',
+//         integer: 7
+//     },
+//     {
+//         operation: 'add',
+//         integer: 3
+//     },
+//     {
+//         operation: 'multiply',
+//         integer: 3
+//     },
+// ]
+//
+// computeOperations(operations2, 10) // returns 60
+//
+//
+// Example 3...
+//
+// var operations3 = [
+//
+//     {
+//         operation: 'subtract',
+//         integer: 5
+//     },
+//     {
+//         operation: 'multiply',
+//         integer: -2
+//     },
+//     {
+//         operation: 'add',
+//         integer: 10
+//     },
+// ]
+//
+// computeOperations(operations3, 10) // returns 0
 
 
+// Create a function, addTwos, that takes in a array of integers and returns the sum of all 2s in the array. If no 2s are in the array, return 0.
 
+// Examples:
 
+var nums1 = [1, 2, 3, 4, 5];
+var nums2 = [2, 2, 3, 4, 5];
+var nums3 = [10, 0, -5, 4, 5];
+var nums4 = [2, 2, -5, 2, 2];
+var nums5 = [2, 2, 2, 2, 2];
 
+function addTwos(){
+    var theTwos = 2
+    for (var i = 0; i < nums.length; i++);
+    if
+}
 
+addTwos(nums1) // returns 2
+addTwos(nums2) // returns 4
+addTwos(nums3) // returns 0
+addTwos(nums4) // returns 8
+addTwos(nums5) // returns 10

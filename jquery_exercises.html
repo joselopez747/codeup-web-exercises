@@ -5,8 +5,26 @@
     <title>jQuery Exercises</title>
 </head>
 <body>
-<main class="container">
-    <h1>jQuery Selectors Exercise</h1>
+    <h1>jQuery Exercises</h1>
+
+    <div id="container">
+        <h1 id="header">text insiee of the h1</h1>
+        <h1 id="header1">text insiee of the h1</h1>
+        <h1 id="header2">text insiee of the h1</h1>
+        <h1 id="header3">text insiee of the h1</h1>
+
+        <p id="id1" class="text">1 text is here 1</p>
+        <p id="id2" class="text">2 text is here 2</p>
+        <p id="id3" class="text">3 text is here 3</p>
+
+        <ul class="list">
+            <li class="codeup item">text 1</li>
+            <li class="codeup item">text 2</li>
+            <li class="item">text 3</li>
+            <li class="item" id="codeup">text 4</li>
+            <li class="codeup item">text 5</li>
+        </ul>
+    </div>
 
 
 
@@ -53,6 +71,26 @@
 //
 //Combine your selectors that highlight all the h1, p, and li elements.
 //  $('h1, p, li').css('background-color', 'yellow');
+
+////////////MOUSE EVENTS///////////
+// Remove your custom jQuery code from previous exercises.
+
+//     Add jQuery code that will change the background color of an h1 element when clicked.
+            $('h1').click(function(){
+                $(this).css('background-color', 'blue');
+            })
+//     Make all paragraphs have a font size of 18px when they are double clicked.
+            $('p').dblclick(function(){
+                $(this).css('font-size', '18px');
+            });
+//     Set all li text color to red when the mouse is hovering; reset to black when it is not.
+            $('li').hover(function(){
+                $(this).css('color', 'red');
+            }, function(){
+                $(this).css('color', 'black');
+            });
+
+
 
         });
 

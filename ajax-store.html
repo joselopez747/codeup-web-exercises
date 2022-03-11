@@ -1,5 +1,19 @@
 <!DOCTYPE html>
 <html>
+    <style>
+        #products {
+            border: 2px solid black;
+        }
+        th {
+            text-decoration: underline;
+        }
+        tr {
+            text-decoration: underline;
+            text-align: center;
+        }
+
+
+    </style>
 <head>
     <title>Online Store</title>
 </head>
@@ -18,7 +32,7 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
-<button id="update">Update Tools</button>
+<button id="btn">Update Tools</button>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -26,56 +40,41 @@
 (function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
-$.get('data/inventory.json').done(function(data, status, jqXhr){
-    alert("AJAX call completed successfully!");
-    console.log('Request status: ' + status);
-    console.log('Data returned from server:');
-    console.log(data);
+    function inventoryRequest(){
+        var inventory = $.get('data/inventory.json');
+        inventory.done(function (data) {
+            console.log(data);
+            $.each(data, function (index, tool) {
+                $('#insertProducts').append("<tr><td>" + tool.title + "</td>" +
+                    "<td>" + tool.quantity + "</td>" +
+                    "<td>" + tool.price + "</td>" +
+                    "<td>" + tool.categories + "</td></tr>");
+            })
+        })
+    }
+    inventoryRequest();
+
+    $('#btn').click(function () {
+        $('#insertProducts').html('');
+        inventoryRequest();
     });
+
+// $.get('data/inventory.json').done(function(data, status, jqXhr){
+//     // alert("AJAX call completed successfully!");
+//     console.log('Request status: ' + status);
+//     console.log('Data returned from server:');
+//     console.log(data);
+//     });
 
     // TODO: Take the data from inventory.json and append it to the products table
 
-    function newTools(inventory){
-        var html = '';
-        for (var i = 0; i < inventory.length; i++){
-            html += '<table>' +
-                    <th>Title + inventory[i].</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Categories</th>
-                    '</table>'
-
-    // }
-    //
-    //     var html = '';
-    //     for (var i = 0; i < orders.length; i += 1) {
-    //         html += '<section>' +
-    //             '        <h3>Order #' + orders[i].orderNumber + '</h3>' +
-    //             '        <dl>' +
-    //             '            <dt>Item Ordered</dt>' +
-    //             '            <dd>' + orders[i].itemOrdered + '</dd>' +
-    //             '            <dt>Ordered by</dt>' +
-    //             '            <dd>' + orders[i].orderedBy + '</dd>' +
-    //             '        </dl>' +
-    //             '    </section>';
-    //     }
-    //     return html;
-    // }
-    //
-    // function updatePage() {
-    //     // make a request to the json file, order.json
-    //     $.get('data/orders.json').done(function(orders) {
-    //         $('#orders').html(createHTML(orders));
-    //     });
-    // }
-
     // when a user clicks on the update button, refresh the page with the latest order information
-    $('#update').click(function() {
-        updatePage()
-        setInterval(updatePage, 5000);
-    });
+    // $('#update').click(function() {
+    //     updatePage()
+    //     setInterval(updatePage, 5000);
+    // });
 
-});
+
 
 
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect

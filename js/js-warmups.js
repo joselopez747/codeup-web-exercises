@@ -464,20 +464,49 @@
 
 // Examples:
 
-var nums1 = [1, 2, 3, 4, 5];
-var nums2 = [2, 2, 3, 4, 5];
-var nums3 = [10, 0, -5, 4, 5];
-var nums4 = [2, 2, -5, 2, 2];
-var nums5 = [2, 2, 2, 2, 2];
+// var nums1 = [1, 2, 3, 4, 5];
+// var nums2 = [2, 2, 3, 4, 5];
+// var nums3 = [10, 0, -5, 4, 5];
+// var nums4 = [2, 2, -5, 2, 2];
+// var nums5 = [2, 2, 2, 2, 2];
+//
+// function addTwos(){
+//     var theTwos = 2
+//     for (var i = 0; i < nums.length; i++);
+//     if
+// }
+//
+// addTwos(nums1) // returns 2
+// addTwos(nums2) // returns 4
+// addTwos(nums3) // returns 0
+// addTwos(nums4) // returns 8
+// addTwos(nums5) // returns 10
 
-function addTwos(){
-    var theTwos = 2
-    for (var i = 0; i < nums.length; i++);
-    if
+// ================================= WARM UP
+
+// Write a function, returnStringObject, that takes in a string and returns an object with information about the string. The object should have properties for stringValue and stringArray.
+//
+
+function returnStringObject(str){
+    return {
+        stringValue: str,
+        stringArray: str.split('')
+    }
 }
 
-addTwos(nums1) // returns 2
-addTwos(nums2) // returns 4
-addTwos(nums3) // returns 0
-addTwos(nums4) // returns 8
-addTwos(nums5) // returns 10
+console.log(returnStringObject('hello'));
+//     Examples...
+//
+// returnStringObject('hello') // returns...
+//
+// {
+//     stringValue: 'hello',
+//         stringArray: ['h', 'e', 'l', 'l', 'o']
+// }
+//
+// returnStringObject('codeup') // returns...
+//
+// {
+//     stringValue: 'codeup',
+//         stringArray: ['c', 'o', 'd', 'e', 'u', 'p']
+// }

@@ -2,3 +2,4 @@
 .idea/*
 keys.js
 secret.txt
+.DS_Store

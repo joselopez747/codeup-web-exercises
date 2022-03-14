@@ -30,20 +30,18 @@
         zoom: 9 // starting zoom
     });
 
-    //     geocode('Zion National Park', MAPBOX_API_TOKEN).then(function(data) {
-    //     console.log(data);
-    //     map.setCenter(data);
-    //     map.setZoom(10);
-    // });
+        geocode('Zion National Park', MAPBOX_API_TOKEN).then(function(data) {
+        console.log(data);
+        map.setCenter(data);
+        map.setZoom(10);
+    });
 
 
     reverseGeocode({lng:-157.8557, lat:21.3045}, MAPBOX_API_TOKEN).then(function(data) {
             console.log(data);
     });
 
-    function reCenter(){
 
-    }
 
 
 

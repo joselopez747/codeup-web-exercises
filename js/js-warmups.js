@@ -510,3 +510,16 @@ console.log(returnStringObject('hello'));
 //     stringValue: 'codeup',
 //         stringArray: ['c', 'o', 'd', 'e', 'u', 'p']
 // }
+
+// ================================= JS WARM UP
+// Write a function, countNegatives, and takes in a array of integers and returns the total number of negative numbers. 0 should be considered a non-negative number. If no negative numbers are present, return 0.
+var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
+var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
+var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
+var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
+
+function countNegatives(){
+    var randomNumber = Math.ceil(Math.random() * -100) - 10;
+    for (var i = 0; i < nums.length; i++);
+    
+}

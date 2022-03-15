@@ -513,13 +513,57 @@ console.log(returnStringObject('hello'));
 
 // ================================= JS WARM UP
 // Write a function, countNegatives, and takes in a array of integers and returns the total number of negative numbers. 0 should be considered a non-negative number. If no negative numbers are present, return 0.
-var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
-var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
-var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
-var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
+// var nums1 = [-5, 10, 2, 5]; // countNegatives(nums1) returns 1
+// var nums2 = [1, -10, -2, 5]; // countNegatives(nums2) returns 2
+// var nums3 = [3, 10, 2, 5]; // countNegatives(nums3) returns 0
+// var nums4 = [-3, -10]; // countNegatives(nums4) returns 2
+//
+// function countNegatives(){
+//     var randomNumber = Math.ceil(Math.random() * -100) - 10;
+//     for (var i = 0; i < nums.length; i++);
+//
+// }
 
-function countNegatives(){
-    var randomNumber = Math.ceil(Math.random() * -100) - 10;
-    for (var i = 0; i < nums.length; i++);
-    
+// Create a function, createFirstNamesArray, that takes in an array of user objects and returns an array of first name strings. Assume that each user object has a property called 'firstName'.
+//
+//     Example...
+//
+var users = [
+    {
+        firstName: 'Bob',
+        lastName: 'Smith',
+        email: 'bob@email.com'
+    },
+    {
+        firstName: 'Sally',
+        lastName: 'Smith',
+        email: 'sally@email.com'
+    },
+    {
+        firstName: 'Fred',
+        lastName: 'Smith',
+        email: 'fred@email.com'
+    },
+    {
+        firstName: 'Cathy',
+        lastName: 'Smith',
+        email: 'cathy@email.com'
+    },
+    {
+        firstName: 'Joe',
+        lastName: 'Smith',
+        email: 'joe@email.com'
+    },
+];
+
+// createFirstNamesArray(users); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+
+function createFirstNamesArray(){
+    var names = []
+    for(var i = 0; i < users.length; i++){
+        names += users[i].firstName + ',';
+    }
+    return names.split()
 }
+
+console.log(createFirstNamesArray());

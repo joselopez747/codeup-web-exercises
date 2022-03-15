@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Exercise</title>
+<!--   mapbox link-->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/weather_map.css"
+
+</head>
+<body>
+<!--title and search bar-->
+<header>
+    <div>
+        <h1>Weather Map Project</h1>
+    </div>
+        <form><label for="city">Enter City</label>
+            <input id="city" type="text">
+            <button id="submit" type="submit">Check Weather</button>
+        </form>
+</header>
+
+<!--boxes for weather updates-->
+    <div id="climate">Climate
+    </div>
+
+    <div id='map' style='width: auto; height: 400px;'></div>
+    <script src="js/mapbox-geocoder-utils.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+    <script src="js/keys.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script>
+    "use strict";
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4916, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+
+    var popup = new mapboxgl.Popup()
+
+    var marker = new mapboxgl.Marker({draggable: true})
+        .setLngLat([-98.4916, 29.4252])
+        .setPopup(popup)
+        .addTo(map);
+
+    marker.on('dragend', function() {
+        alert(marker.getLngLat());
+    });
+
+    $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        lat: 29.4252,
+        lon: -98.4916,
+        appid: WEATHER_TOKEN,
+        exclude: 'minutely,hourly,current,alerts',
+        units: 'imperial'
+    }).done(function(data) {
+        console.log(data);
+        for(var i = 0; i < 5; i++);
+        $('#climate').html(document.getElementById('climate').innerHTML +
+        '<div ')
+    }).fail(function(jqXhr, status, error) {
+        console.log(jqXhr);
+        console.log(status);
+        console.log(error);
+    });
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

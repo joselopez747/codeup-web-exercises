@@ -56,6 +56,22 @@
 
 
 
+    //this gets the weather conditions to console.log specifically for san antonio
+    $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        lat: 29.4252,
+        lon: -98.4916,
+        appid: WEATHER_TOKEN,
+        exclude: 'minutely,hourly,current,alerts',
+        units: 'imperial'
+    }).done(function(data) {
+        console.log(data);
+    }).fail(function(jqXhr, status, error) {
+        console.log(jqXhr);
+        console.log(status);
+        console.log(error);
+    });
+
+
 
     //this is what displays the popup, marker and alert
     var popup = new mapboxgl.Popup()
@@ -64,10 +80,31 @@
         .setPopup(popup)
         .addTo(map);
     marker.on('dragend', function() {
-        alert(marker.getLngLat());
+        // alert(marker.getLngLat());
     });
 
-    //submit button linked to map location displays weather
+
+    // need a function to display the conditions on screen not just console.log
+    function displayWeather(weather){
+        var html = '';
+        for (var i = 0; i < 5; i++);
+            var dateData = data.daily[i].dt;
+            var date = new Date(dateData * 1000).toDateString();
+            var description = data.daily[i].weather[0].description
+            var tempMax = Math.round(data.daily[i].temp.max);
+            var tempMin = Math.round(data.daily[i].temp.min);
+            var humidity = data.daily[i].humidity;
+            var pressure = data.daily[i].pressure
+
+        html += '<div id="d-none">'
+
+    }
+
+
+
+
+
+    //submit button linked to map location weather
     $('#submit').click(function (e) {
         e.preventDefault();
         var str = $('#city').val();
@@ -119,15 +156,7 @@
 
 
 
-    //this gets the weather conditions to console.log
-    $.get('https://api.openweathermap.org/data/2.5/onecall', {
-        lat: 29.4252,
-        lon: -98.4916,
-        appid: WEATHER_TOKEN,
-        exclude: 'minutely,hourly,current,alerts',
-        units: 'imperial'
-    }).done(function(data) {
-        console.log(data);
+
 
     //     for (var i = 0; i < 5;  i++);
     //     $('#climate').html(document.getElementById('climate').innerHTML +
@@ -141,25 +170,6 @@
     //     );
     // });
 
-
-    }).fail(function(jqXhr, status, error) {
-        console.log(jqXhr);
-        console.log(status);
-        console.log(error);
-    });
-
-
-    $('submit').click(function(e){
-        e.preventDefault();
-        const str = $('#city').val();
-        consol.log(str);
-        geocode(str, MAPBOX_API_TOKEN).then(function(data){
-            map.setCenter(data);
-            marker.setLngLat(data);
-
-            document.getElementById('climate').innerHTML = ''
-        })
-    })
 
 
 </script>

@@ -30,7 +30,7 @@
         zoom: 9 // starting zoom
     });
 
-        geocode('Zion National Park', MAPBOX_API_TOKEN).then(function(data) {
+    geocode('Zion National Park', MAPBOX_API_TOKEN).then(function(data) {
         console.log(data);
         map.setCenter(data);
         map.setZoom(10);
@@ -38,7 +38,7 @@
 
 
     reverseGeocode({lng:-157.8557, lat:21.3045}, MAPBOX_API_TOKEN).then(function(data) {
-            console.log(data);
+        console.log(data);
     });
 
 
@@ -49,6 +49,10 @@
 </script>
 </body>
 </html>
+
+
+
+
 <!--Mini - Exercise 4 (before final exercise)-->
 
 <!--Create an HTML file called mapbox-4.html centered on San Antonio that programmatically is re-centered over Zion National Park using the coordinates of the park by geocoding the physical address.-->

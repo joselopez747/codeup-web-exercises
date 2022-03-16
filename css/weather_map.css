@@ -1,2 +1,8 @@
-.boxes {
+form {
+    font-weight: bold;
+    margin: 0;
+    padding: .5em;
+    background-color: dodgerblue;
+    width: auto;
 }
+

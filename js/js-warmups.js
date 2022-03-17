@@ -487,14 +487,14 @@
 // Write a function, returnStringObject, that takes in a string and returns an object with information about the string. The object should have properties for stringValue and stringArray.
 //
 
-function returnStringObject(str){
-    return {
-        stringValue: str,
-        stringArray: str.split('')
-    }
-}
-
-console.log(returnStringObject('hello'));
+// function returnStringObject(str){
+//     return {
+//         stringValue: str,
+//         stringArray: str.split('')
+//     }
+// }
+//
+// console.log(returnStringObject('hello'));
 //     Examples...
 //
 // returnStringObject('hello') // returns...
@@ -528,42 +528,69 @@ console.log(returnStringObject('hello'));
 //
 //     Example...
 //
-var users = [
-    {
-        firstName: 'Bob',
-        lastName: 'Smith',
-        email: 'bob@email.com'
-    },
-    {
-        firstName: 'Sally',
-        lastName: 'Smith',
-        email: 'sally@email.com'
-    },
-    {
-        firstName: 'Fred',
-        lastName: 'Smith',
-        email: 'fred@email.com'
-    },
-    {
-        firstName: 'Cathy',
-        lastName: 'Smith',
-        email: 'cathy@email.com'
-    },
-    {
-        firstName: 'Joe',
-        lastName: 'Smith',
-        email: 'joe@email.com'
-    },
-];
+// var users = [
+//     {
+//         firstName: 'Bob',
+//         lastName: 'Smith',
+//         email: 'bob@email.com'
+//     },
+//     {
+//         firstName: 'Sally',
+//         lastName: 'Smith',
+//         email: 'sally@email.com'
+//     },
+//     {
+//         firstName: 'Fred',
+//         lastName: 'Smith',
+//         email: 'fred@email.com'
+//     },
+//     {
+//         firstName: 'Cathy',
+//         lastName: 'Smith',
+//         email: 'cathy@email.com'
+//     },
+//     {
+//         firstName: 'Joe',
+//         lastName: 'Smith',
+//         email: 'joe@email.com'
+//     },
+// ];
+//
+// // createFirstNamesArray(users); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
+//
+// function createFirstNamesArray(){
+//     var names = []
+//     for(var i = 0; i < users.length; i++){
+//         names += users[i].firstName + ',';
+//     }
+//     return names.split()
+// }
+//
+// console.log(createFirstNamesArray());
 
-// createFirstNamesArray(users); // returns... ['Bob', 'Sally', 'Fred', 'Cathy', 'Joe']
 
-function createFirstNamesArray(){
-    var names = []
-    for(var i = 0; i < users.length; i++){
-        names += users[i].firstName + ',';
-    }
-    return names.split()
-}
+//////DOM EXERCISE TO CHANGE COLOR BY CLICKING BUTTON
 
-console.log(createFirstNamesArray());
+// var changeColorButton = document.getElementById('changeColor');
+// changeColorButton.addEventListener('click', function(){
+//     alert('yo');
+// })
+
+
+var changeColorButton = document.querySelector("#changeColor");
+changeColorButton.addEventListener('click', function(){
+    document.getElementById('square').style.backgroundColor='red';
+});
+
+
+
+//jquery way to do button click
+// $('#changeColor').click(function(){
+//     $("#square").css('background', 'red');
+// });
+
+
+//reset button
+document.getElementById("reset").addEventListener('click', function(){
+    location.reload();
+});

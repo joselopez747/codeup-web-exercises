@@ -577,10 +577,10 @@
 // })
 
 
-var changeColorButton = document.querySelector("#changeColor");
-changeColorButton.addEventListener('click', function(){
-    document.getElementById('square').style.backgroundColor='red';
-});
+// var changeColorButton = document.querySelector("#changeColor");
+// changeColorButton.addEventListener('click', function(){
+//     document.getElementById('square').style.backgroundColor='red';
+// });
 
 
 
@@ -591,6 +591,27 @@ changeColorButton.addEventListener('click', function(){
 
 
 //reset button
-document.getElementById("reset").addEventListener('click', function(){
-    location.reload();
+// document.getElementById("reset").addEventListener('click', function(){
+//     location.reload();
+// });
+
+
+//changing the color of a square(div) by hovering over it
+//jquery solution
+$(".square").hover(function(){
+    console.log(($this).attr('data-color'));
+    const $targetColor = ($this).attr('data-color');
+    $(this).css('background-color', $targetColor);
+}, function (){
+    $(this).css('background-color', '');
 });
+
+//vanilla javascript
+// document.querySelectorAll('.square').
+//     forEach(function(element){
+//         element.addEventListener(('mouseenter', function(){
+//             const targetColor = event.target.dataset.color;
+//             console.log(targetColor);
+//         }));
+//
+// });

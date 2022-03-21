@@ -85,22 +85,22 @@
 
 
     // need a function to display the conditions on screen not just console.log
-    function displayWeather(weather){
-        var html = '';
-        for (var i = 0; i < 5; i++);
-            var dateData = data.daily[i].dt;
-            var date = new Date(dateData * 1000).toDateString();
-            var description = data.daily[i].weather[0].description
-            var tempMax = Math.round(data.daily[i].temp.max);
-            var tempMin = Math.round(data.daily[i].temp.min);
-            var humidity = data.daily[i].humidity;
-            var pressure = data.daily[i].pressure
+    // function displayWeather(weather) {
+    //     var html = '';
+        for (var i = 0; i < 5; i++) ;
+        var dateData = data.daily[i].dt;
+        var date = new Date(dateData * 1000).toDateString();
+        var description = data.daily[i].weather[0].description
+        var tempMax = Math.round(data.daily[i].temp.max);
+        var tempMin = Math.round(data.daily[i].temp.min);
+        var humidity = data.daily[i].humidity;
+        var pressure = data.daily[i].pressure
 
-        html += '<div id="d-none">' ;
-            return html;
 
-    }
-
+        let weatherr = `<div>${date} is a <span>${description}</span> in ${tempMax}.</div>`;
+        //
+        document.getElementById('climate').innerHTML = weatherr;
+    // }
 
 
 

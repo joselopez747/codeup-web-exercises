@@ -47,12 +47,12 @@
 //
 //
 // //* write a function that takes in a string and returns its length
-//
+// //
 // function strLength(string){
 //     return string.length;
 // }
 // console.log(strLength("hello"));
-//
+// //
 // //* Write a function that takes in two strings and returns the sum of their lengths
 //
 // function stringLength(str1,str2){
@@ -598,13 +598,13 @@
 
 //changing the color of a square(div) by hovering over it
 //jquery solution
-$(".square").hover(function(){
-    console.log(($this).attr('data-color'));
-    const $targetColor = ($this).attr('data-color');
-    $(this).css('background-color', $targetColor);
-}, function (){
-    $(this).css('background-color', '');
-});
+// $(".square").hover(function(){
+//     console.log(($this).attr('data-color'));
+//     const $targetColor = ($this).attr('data-color');
+//     $(this).css('background-color', $targetColor);
+// }, function (){
+//     $(this).css('background-color', '');
+// });
 
 //vanilla javascript
 // document.querySelectorAll('.square').
@@ -615,3 +615,43 @@ $(".square").hover(function(){
 //         }));
 //
 // });
+
+
+//Create a function, encodeStr, that takes in a string and returns the string of characters with the following substitutions:
+// ‘a’ or ‘A’ becomes ‘@’
+// ‘i’ or ‘I’ becomes ‘1’
+// ‘s’ or ‘S’ becomse ‘$’
+
+// function encodeStr(str){
+//     for (var i = 0; i < str.length; i++)
+//         if (str[i] === 'a' || str[i] === 'A')
+//             return (this) '@';
+// };
+// console.log(encodeStr('Hola'));
+
+
+
+//solution using map
+function encodeStr(str){
+    //map is used in an array
+    //split the string into an array of chars
+    //map over them to produce a return value that changes the three chars and returns the current charcter otherwise
+    //join the chars into our final output
+
+    return str.split('').map(char => {
+        if (char.toLowerCase() === 'a'){
+            return '@';
+        } else if (char.toLowerCase() === 's') {
+            return '$';
+        } else if (char.toLowerCase() === 'i') {
+            return '1';
+        } else {
+            return char;
+        }
+    }).join('');
+}
+
+console.log(encodeStr('apple')); // returns ‘@pple’
+console.log(encodeStr('codeup')); // returns ‘codeup’
+console.log(encodeStr('SASS')); // returns ‘$@$$’
+console.log(encodeStr('bike')); // returns ‘b1ke’

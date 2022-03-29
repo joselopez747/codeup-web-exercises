@@ -632,26 +632,50 @@
 
 
 //solution using map
-function encodeStr(str){
+// function encodeStr(str){
     //map is used in an array
     //split the string into an array of chars
     //map over them to produce a return value that changes the three chars and returns the current charcter otherwise
     //join the chars into our final output
 
-    return str.split('').map(char => {
-        if (char.toLowerCase() === 'a'){
-            return '@';
-        } else if (char.toLowerCase() === 's') {
-            return '$';
-        } else if (char.toLowerCase() === 'i') {
-            return '1';
-        } else {
-            return char;
+//     return str.split('').map(char => {
+//         if (char.toLowerCase() === 'a'){
+//             return '@';
+//         } else if (char.toLowerCase() === 's') {
+//             return '$';
+//         } else if (char.toLowerCase() === 'i') {
+//             return '1';
+//         } else {
+//             return char;
+//         }
+//     }).join('');
+// }
+//
+// console.log(encodeStr('apple')); // returns ‘@pple’
+// console.log(encodeStr('codeup')); // returns ‘codeup’
+// console.log(encodeStr('SASS')); // returns ‘$@$$’
+// console.log(encodeStr('bike')); // returns ‘b1ke’
+
+
+
+//29Mar2022 JS Warmup
+// Write a function, returnMostCommonVowel, that takes in a string and returns the most common vowel in the string.
+//Assume the characters in the string are all lowercase and only 'a' 'e' 'i' 'o' 'u' count as vowels. Return the most common vowel from the string.
+//
+//If the highest vowel count is shared between multiple vowels, return the first vowel alphabetically. (2 'a's and 2 'e's should 'a')
+//
+// If no vowels are in the string return false.
+
+function returnMostCommonVowel(str){
+    let vowels = ('aeiou')
+    let vowelCount = 0;
+    for (var i = 0; i < str.length; i++){
+        if (str[i].vowels == 0){
+            return false;
+        } else if (str[i].vowels !== 0) {
+            return vowelCount;
         }
-    }).join('');
+    }
 }
 
-console.log(encodeStr('apple')); // returns ‘@pple’
-console.log(encodeStr('codeup')); // returns ‘codeup’
-console.log(encodeStr('SASS')); // returns ‘$@$$’
-console.log(encodeStr('bike')); // returns ‘b1ke’
+console.log(returnMostCommonVowel("codeup"));

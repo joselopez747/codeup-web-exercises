@@ -666,16 +666,68 @@
 //
 // If no vowels are in the string return false.
 
-function returnMostCommonVowel(str){
-    let vowels = ('aeiou')
-    let vowelCount = 0;
-    for (var i = 0; i < str.length; i++){
-        if (str[i].vowels == 0){
-            return false;
-        } else if (str[i].vowels !== 0) {
-            return vowelCount;
-        }
-    }
-}
+// function returnMostCommonVowel(str){
+//     let vowels = ('aeiou')
+//     let vowelCount = 0;
+//     for (var i = 0; i < str.length; i++){
+//         if (str[i].vowels == 0){
+//             return false;
+//         } else if (str[i].vowels !== 0) {
+//             return vowelCount;
+//         }
+//     }
+// }
+//
+// console.log(returnMostCommonVowel("codeup"));
 
-console.log(returnMostCommonVowel("codeup"));
+
+
+
+//30Mar2022 JS Warmup
+//  ================================= WARM UP
+// Create a function, returnAvgAdminSalary, that takes in an array of users and returns the average salary of all admins. Round to the nearest dollar.
+
+// function returnAvgAdminSalary(){
+//      for (var i = 0; i < users.length; i++){
+//          return users;
+//      }
+// }
+
+
+//
+//     Example:
+//
+// function returnAvgAdminSalary(users){
+//     const admin = users.filter(user => users.isAdmin);
+//     return admins.reduce((accum, curr) => accum + curr.salary, 0) / admins.length;
+// }
+
+// const users = [
+//     {
+//         name: 'Fred',
+//         isAdmin: true,
+//         salary: 20000
+//     },
+//     {
+//         name: 'Cathy',
+//         isAdmin: false,
+//         salary: 40000
+//     },
+//     {
+//         name: 'Sally',
+//         isAdmin: true,
+//         salary: 80000
+//     },
+//     {
+//         name: 'Kyle',
+//         isAdmin: true,
+//         salary: 50000
+//     },
+//     {
+//         name: 'Cynthia',
+//         isAdmin: false,
+//         salary: 100000
+//     }
+// ];
+
+// returnAvgAdminSalary(users) // returns 50000
